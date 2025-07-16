@@ -1,0 +1,240 @@
+body {
+  font-family: sans-serif;
+  background: #111;
+  color: #eee;
+  margin: 0;
+  padding: 20px;
+  direction: rtl;
+}
+
+.album-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.track-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 15px;
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cover {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 1rem;
+  margin: 0;
+  color: #f0f0f0;
+}
+
+.waveform {
+  height: 60px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.play-btn {
+  background: #c9a86a;
+  border: none;
+  color: #111;
+  padding: 6px 14px;
+  border-radius: 22px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* اضافه شده برای حذف حالت آبی فوکوس */
+.play-btn:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: #c9a86a;
+  color: #111;
+}
+
+.downloads {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.download-btn,
+.zip-download-btn {
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid #888;
+  border-radius: 20px;
+  color: #ccc;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover,
+.zip-download-btn:hover {
+  border-color: #c9a86a;
+  color: #c9a86a;
+}
+.play-btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-appearance: none;
+  background-color: #c9a86a;
+  color: #111;
+}
+
+.play-btn {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.waveform {
+  height: 35px !important;
+  max-height: 35px !important;
+  width: 100%;
+}
+
+.waveform {
+  box-shadow: 0 2px 8px rgba(201, 168, 106, 0.4);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  height: 40px !important;
+}
+.intro-section {
+  max-width: 900px;        /* محدود کردن عرض کل بخش */
+  margin: 0 auto 30px;     /* وسط چین کردن و فاصله پایین */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
+  box-sizing: border-box;  /* اطمینان از محاسبه درست padding */
+}
+
+.intro-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.intro-text {
+  color: #eee;
+  font-size: 1rem;
+  line-height: 1.5;
+  flex: 1;                /* اجازه میده متن فضای باقی مانده رو بگیره */
+}
+
+/* واکنشگرا برای صفحه‌های موبایل */
+@media (max-width: 600px) {
+  .intro-section {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 15px;
+    text-align: center;
+  }
+
+
+
+.intro-section {
+  max-width: 900px;
+  margin: 0 auto 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.intro-image {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 14px;
+  flex-shrink: 0;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+.intro-image:hover {
+  transform: scale(1.05);
+}
+
+.intro-text {
+  color: #eee;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.intro-text h2 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  letter-spacing: 0.03em;
+}
+
+.intro-text p {
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+/* موبایل */
+@media (max-width: 600px) {
+  .intro-section {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 15px;
+    text-align: center;
+  }
+  .intro-image {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 15px;
+  }
+  .intro-text h2 {
+    font-size: 1.5rem;
+  }
+  .intro-text {
+    font-size: 1rem;
+  }
+}
+
+.small-bold {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+ .highlight-gold {
+  color: #c9a86a;
+  font-weight: bold;
+}
+
+main {
+    margin-top: 0;
+    padding-top: 0;
+}
